@@ -3,13 +3,12 @@ name: run Main.py
 on:
   schedule:
     # At 16:00 on every 26th day-of-month. (crontab.guru/#0_16_*/26_*_*)
-    - cron: '*/3 * * * *'
+    - cron: '*/21 * * * *'
 
 jobs:
-  build:
+  runs:
     runs-on: ubuntu-latest
     steps:
-
       - name: set up python
         uses: actions/checkout@main
         with:
