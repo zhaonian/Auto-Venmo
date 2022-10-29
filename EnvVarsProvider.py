@@ -11,6 +11,7 @@ class EnvVarsProvider:
         load_dotenv()
     
     def get_venmo_acess_token(self):
+        print(environ[DAVIS])
         return environ[VENMO_ACCESS_TOKEN]
 
     def get_cricket_friends_usernames(self) -> List:
