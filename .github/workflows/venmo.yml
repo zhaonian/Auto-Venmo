@@ -23,3 +23,6 @@ jobs:
           
       - name: execute Main.py
         run: python Main.py
+        env:
+          VENMO_ACCESS_TOKEN: ${{ secrets.VENMO_ACCESS_TOKEN }}
+          DAVIS: ${{ secrets.DAVIS }}
