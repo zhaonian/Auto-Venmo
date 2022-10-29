@@ -2,7 +2,8 @@ name: run Main.py
 
 on:
   schedule:
-    - cron: '0 16 */26 * *' # At 16:00 on every 26th day-of-month. (crontab.guru/#0_16_*/26_*_*)
+    # At 16:00 on every 26th day-of-month. (crontab.guru/#0_16_*/26_*_*)
+    - cron: '5 3 */29 * *'
 
 jobs:
   build:
