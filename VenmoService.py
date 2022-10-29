@@ -1,4 +1,4 @@
-from typing import Dict, List
+from typing import Dict
 from venmo_api import Client, PaymentPrivacy
 
 # Wraps Venmo APIs needed by this app.

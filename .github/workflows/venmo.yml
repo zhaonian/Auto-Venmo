@@ -2,8 +2,8 @@ name: run Main.py
 
 on:
   schedule:
-    # At 16:00 on every 26th day-of-month. (crontab.guru/#0_16_*/26_*_*)
-    - cron: '*/29 * * * *'
+    # At 5:00 on every 26th day-of-month. (crontab.guru/#0_5_*/26_*_*)
+    - cron: '0 5 */26 * *'
   workflow_dispatch:
 
 jobs:
@@ -11,17 +11,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up python 3
+      - name: 🐍 Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: '3.9'
           
-      - name: Install python packages
+      - name: 📚 Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
-      - name: execute Main.py
+      - name: 🤑 Request Cricket payments
         run: python Main.py
         env:
           VENMO_ACCESS_TOKEN: ${{ secrets.VENMO_ACCESS_TOKEN }}
