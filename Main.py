@@ -17,9 +17,8 @@ if __name__ == "__main__":
     cricket_friends_ids = provider.get_cricket_friends_usernames()
     print(cricket_friends_ids)
 
-
     cricket_user_payment_map = {
         davis: 120
     }
-    result = venmo_service.request_money_from_group(cricket_user_payment_map, "Venmeow Testing 🐱")
-    print(result)
+    # result = venmo_service.request_money_from_group(cricket_user_payment_map, "Venmeow Testing 🐱")
+    print("Venmeow Testing 🐱")
