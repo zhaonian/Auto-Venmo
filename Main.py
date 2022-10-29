@@ -9,7 +9,7 @@ if __name__ == "__main__":
     provider = EnvVarsProvider()
 
     venmo_service = VenmoService(provider.get_venmo_acess_token())
-    davis = venmo_service.get_user_id_by_username("username")
+    davis = venmo_service.get_user_id_by_username(provider.get_cricket_friends_usernames()[0])
 
     # result = venmo_service.request_money(userid=davis, amount=1.23, description="Test")
     # print(result)
