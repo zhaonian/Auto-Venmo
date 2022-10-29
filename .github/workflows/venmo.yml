@@ -3,7 +3,7 @@ name: run Main.py
 on:
   schedule:
     # At 16:00 on every 26th day-of-month. (crontab.guru/#0_16_*/26_*_*)
-    - cron: '5 3 */29 * *'
+    - cron: '0 16 */26 * *'
 
 jobs:
   build:
@@ -11,7 +11,7 @@ jobs:
     steps:
 
       - name: set up python
-        uses: actions/setup-python@v4
+        uses: actions/checkout@master
         with:
           python-version: '3.9'
           
