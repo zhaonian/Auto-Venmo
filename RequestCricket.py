@@ -11,4 +11,5 @@ if __name__ == "__main__":
     }
     venmo_service.request_money_from_friends(
         cricket_userid_amount_dict, 
-        description="Recurring payment requested via zluan․io/venmeow 🐱")
+        description="""Recurring payment via \nzluan․io/venmeow 🐱"""
+    )

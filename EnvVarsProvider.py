@@ -10,9 +10,10 @@ class EnvVarsProvider:
         load_dotenv()
 
         self.CRICKET_FRIENDS = {
-            environ[YUNHAO] : 60,
-            environ[SHUAI]  : 35,
-            environ[AUTUMN] : 25,
+            # environ[YUNHAO] : 60,
+            # environ[SHUAI]  : 35,
+            # environ[AUTUMN] : 25,
+            environ[DAVIS]: 25
         }
 
         self.YT_PREMIUM_FRIENDS = {
