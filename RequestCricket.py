@@ -9,4 +9,6 @@ if __name__ == "__main__":
         venmo_service.get_user_id_by_username(username): amount
         for (username, amount) in provider.get_cricket_username_amount_dict().items()
     }
-    venmo_service.request_money_from_friends(cricket_userid_amount_dict, description="Venmeow Testing 🐱")
+    venmo_service.request_money_from_friends(
+        cricket_userid_amount_dict, 
+        description="Recurring payment requested via zluan․io/venmeow 🐱")

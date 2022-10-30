@@ -22,7 +22,7 @@ jobs:
           pip install -r requirements.txt
           
       - name: 🤑 Request Cricket payments
-        run: python RequestVenmo.py
+        run: python RequestCricket.py
         env:
           VENMO_ACCESS_TOKEN: ${{ secrets.VENMO_ACCESS_TOKEN }}
           AUTUMN: ${{ secrets.AUTUMN }}

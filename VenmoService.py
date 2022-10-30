@@ -13,7 +13,7 @@ class VenmoService:
         print("User not found!")
         return None
 
-    def request_money(self, userid, amount, description, callback=None):
+    def _request_money(self, userid, amount, description, callback=None):
         return self.client.payment.request_money(
             amount, description, userid, PaymentPrivacy.PUBLIC, None, callback)
 
