@@ -1,4 +1,4 @@
-name: run Main.py
+name: Request Cricket Payments
 
 on:
   schedule:
@@ -22,7 +22,12 @@ jobs:
           pip install -r requirements.txt
           
       - name: 🤑 Request Cricket payments
-        run: python Main.py
+        run: python RequestVenmo.py
         env:
           VENMO_ACCESS_TOKEN: ${{ secrets.VENMO_ACCESS_TOKEN }}
-          DAVIS: ${{ secrets.DAVIS }}
+          AUTUMN: ${{ secrets.AUTUMN }}
+          SHUAI: ${{ secrets.SHUAI }}
+          YUNHAO: ${{ secrets.YUNHAO }}
+          YUCAO: ${{ secrets.YUCAO }}
+          YILONG: ${{ secrets.YILONG }}
+          NING: ${{ secrets.NING }}

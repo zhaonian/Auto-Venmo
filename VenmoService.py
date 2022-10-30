@@ -17,6 +17,6 @@ class VenmoService:
         return self.client.payment.request_money(
             amount, description, userid, PaymentPrivacy.PUBLIC, None, callback)
 
-    def request_money_from_group(self, user_payment_map: Dict, description):
-        for userid, amount in user_payment_map.items():
+    def request_money_from_friends(self, userid_payment_map: Dict, description):
+        for userid, amount in userid_payment_map.items():
             self.request_money(userid, amount, description)
