@@ -19,4 +19,4 @@ class VenmoService:
 
     def request_money_from_friends(self, userid_payment_map: Dict, description):
         for userid, amount in userid_payment_map.items():
-            self.request_money(userid, amount, description)
+            self._request_money(userid, amount, description)
