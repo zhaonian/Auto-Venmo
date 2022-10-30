@@ -10,10 +10,9 @@ class EnvVarsProvider:
         load_dotenv()
 
         self.CRICKET_FRIENDS = {
-            # environ[YUNHAO] : 60,
-            # environ[SHUAI]  : 35,
-            # environ[AUTUMN] : 25,
-            environ[DAVIS]: 25
+            environ[YUNHAO] : 60,
+            environ[SHUAI]  : 35,
+            environ[AUTUMN] : 25,
         }
 
         self.YT_PREMIUM_FRIENDS = {
@@ -28,3 +27,6 @@ class EnvVarsProvider:
 
     def get_cricket_username_amount_dict(self) -> Dict:
         return self.CRICKET_FRIENDS
+
+    def get_yt_username_amount_dict(self) -> Dict:
+        return self.YT_PREMIUM_FRIENDS

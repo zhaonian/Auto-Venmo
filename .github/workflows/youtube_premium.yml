@@ -1,0 +1,33 @@
+name: Request Youtube Premium Payments
+
+on:
+  schedule:
+    # At 04:00 on day-of-month 27 in every 6th month. (https://crontab.guru/#0_4_27_*/6_*)
+    - cron: '0 4 27 */6 *'
+  workflow_dispatch:
+
+jobs:
+  runs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 🐍 Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+          
+      - name: 📚 Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          
+      - name: 🤑 Request Youtube Premium payments
+        run: python RequestYtPremium.py
+        env:
+          VENMO_ACCESS_TOKEN: ${{ secrets.VENMO_ACCESS_TOKEN }}
+          AUTUMN: ${{ secrets.AUTUMN }}
+          SHUAI: ${{ secrets.SHUAI }}
+          YUNHAO: ${{ secrets.YUNHAO }}
+          YUCAO: ${{ secrets.YUCAO }}
+          YILONG: ${{ secrets.YILONG }}
+          NING: ${{ secrets.NING }}
