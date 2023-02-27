@@ -11,7 +11,6 @@ class EnvVarsProvider:
 
         self.CRICKET_FRIENDS = {
             environ[YUNHAO] : 60,
-            environ[SHUAI]  : 35,
             environ[AUTUMN] : 25,
         }
 
