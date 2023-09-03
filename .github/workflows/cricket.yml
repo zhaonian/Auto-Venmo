@@ -31,3 +31,10 @@ jobs:
           YUCAO: ${{ secrets.YUCAO }}
           YILONG: ${{ secrets.YILONG }}
           NING: ${{ secrets.NING }}
+
+      # https://github.com/zhaonian/Venmeow/issues/2
+      - name: 🔧 Keep the action alive
+        uses: gautamkrishnar/keepalive-workflow@1.1.0
+
+
+
