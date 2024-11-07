@@ -21,7 +21,7 @@ class EnvVarsProvider:
             environ[NING]   : 23,
         }
     
-    def get_venmo_acess_token(self):
+    def get_venmo_access_token(self):
         return environ[VENMO_ACCESS_TOKEN]
 
     def get_cricket_username_amount_dict(self) -> Dict:

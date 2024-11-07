@@ -3,7 +3,7 @@ from VenmoService import VenmoService
 
 if __name__ == "__main__":
     provider = EnvVarsProvider()
-    venmo_service = VenmoService(provider.get_venmo_acess_token())
+    venmo_service = VenmoService(provider.get_venmo_access_token())
 
     cricket_userid_amount_dict = {
         venmo_service.get_user_id_by_username(username): amount
